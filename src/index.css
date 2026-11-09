@@ -1,0 +1,99 @@
+/* Marca Lhambda: blanco y negro, Sora. Claro por defecto, oscuro si el sistema lo pide. */
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff; --surface: #fafafa; --surface-2: #f4f4f5; --line: #e4e4e7;
+  --ink: #09090b; --ink-2: #52525b; --frame: #09090b;
+  --font: "Sora", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --gutter: clamp(16px, 5vw, 40px);
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #080809; --surface: #0e0e10; --surface-2: #141417; --line: #26262a; --ink: #fafafa; --ink-2: #a1a1aa; --frame: #2a2a2f; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 1.0625rem/1.7 var(--font); }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 1120px; margin-inline: auto; padding-inline: var(--gutter); }
+h1, h2, h3 { margin: 0; font-weight: 700; line-height: 1.1; letter-spacing: -.035em; text-wrap: balance; }
+h2 { font-size: clamp(1.7rem, 1rem + 2.4vw, 2.6rem); max-width: 20ch; }
+section { padding-block: clamp(52px, 8vw, 96px); }
+p { margin: 0; }
+
+/* header */
+.top { display: flex; align-items: center; justify-content: space-between; padding-block: 20px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 1.2rem; letter-spacing: -.02em; text-decoration: none; }
+.brand img { height: 32px; width: auto; display: block; }
+.top .mail { font-weight: 500; font-size: .95rem; text-decoration: none; border-bottom: 1.5px solid var(--ink); padding-bottom: 2px; }
+
+/* hero */
+.hero { padding-block: clamp(28px, 6vw, 72px) clamp(52px, 8vw, 104px); }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(36px, 6vw, 72px); align-items: center; }
+h1 { font-size: clamp(2.3rem, 1rem + 4.4vw, 3.9rem); letter-spacing: -.03em; line-height: 1.04; }
+.lede { font-size: 1.15rem; max-width: 32rem; margin: 1.5rem 0 2rem; color: var(--ink-2); text-wrap: pretty; }
+.actions { display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center; }
+.btn { display: inline-block; font-weight: 600; font-size: 1rem; background: var(--ink); color: var(--bg); padding: .95rem 1.5rem; border-radius: 12px; text-decoration: none; }
+.btn:hover { opacity: .88; }
+.link { font-weight: 500; font-size: .98rem; color: var(--ink-2); }
+
+/* chat: lo único llamativo de la página */
+.phone { justify-self: center; width: min(100%, 330px); margin: 0; }
+.screen { border: 9px solid var(--frame); border-radius: 38px; overflow: hidden; background: var(--surface-2); }
+.bar { display: flex; align-items: center; gap: 10px; background: var(--frame); color: #fff; padding: 12px 14px; font: 600 .92rem/1.2 var(--font); }
+.bar small { display: block; font-weight: 400; font-size: .72rem; color: #b4b4bc; }
+.avatar { width: 34px; height: 34px; border-radius: 50%; background: #fff; display: grid; place-items: center; flex: none; }
+.avatar img { width: 19px; height: 19px; object-fit: contain; }
+.chat { list-style: none; margin: 0; padding: 16px 12px 20px; display: flex; flex-direction: column; gap: 8px; min-height: 450px; font-size: .86rem; line-height: 1.4; }
+.msg { max-width: 86%; padding: 8px 11px 5px; border-radius: 14px 14px 14px 4px; background: var(--bg); border: 1px solid var(--line); align-self: flex-start; }
+.msg.me { align-self: flex-end; background: var(--ink); color: var(--bg); border-color: var(--ink); border-radius: 14px 14px 4px 14px; }
+.msg time { display: block; text-align: right; font-size: .7rem; opacity: .72; margin-top: 2px; }
+.note { text-align: center; font-size: .82rem; color: var(--ink-2); margin-top: 14px; }
+@media (prefers-reduced-motion: no-preference) {
+  .msg { opacity: 0; transform: translateY(10px); animation: in .45s ease-out forwards; animation-delay: var(--d); }
+  @keyframes in { to { opacity: 1; transform: none; } }
+}
+
+/* servicios */
+.rows { margin-top: 40px; border-top: 1.5px solid var(--ink); }
+.row { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 12px 48px; padding: 30px 0; border-bottom: 1px solid var(--line); }
+.row h3 { font-size: 1.45rem; }
+.row p { max-width: 58ch; color: var(--ink-2); }
+
+/* rubros */
+.split { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 32px 48px; }
+dl { margin: 0; }
+dt { font-weight: 600; font-size: 1.1rem; line-height: 1.3; letter-spacing: -.02em; margin-top: 24px; }
+dt:first-child { margin-top: 0; }
+dd { margin: 4px 0 0; max-width: 58ch; color: var(--ink-2); }
+.ask { margin-top: 36px; max-width: 58ch; font-weight: 600; }
+
+/* prueba */
+.proof { background: var(--surface-2); border-block: 1px solid var(--line); }
+.proof p { max-width: 60ch; margin-top: 1.2rem; color: var(--ink-2); }
+.proof .stack { font-size: .95rem; }
+
+/* pasos */
+.steps { list-style: none; margin: 40px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; counter-reset: s; }
+.steps li { counter-increment: s; border-top: 1.5px solid var(--ink); padding-top: 16px; color: var(--ink-2); font-size: .98rem; line-height: 1.6; }
+.steps li::before { content: counter(s); display: block; font-weight: 700; font-size: 2.3rem; line-height: 1; letter-spacing: -.04em; color: var(--ink); margin-bottom: 14px; }
+.steps b { display: block; font-weight: 600; font-size: 1.05rem; color: var(--ink); margin-bottom: 4px; }
+
+/* contacto */
+.contact { background: var(--ink); color: var(--bg); }
+.contact h2 { max-width: 16ch; }
+.contact p { max-width: 46ch; margin: 1.2rem 0 2rem; opacity: .8; }
+.contact .actions .btn { background: var(--bg); color: var(--ink); }
+.contact .link { color: var(--bg); opacity: .8; }
+.contact :focus-visible { outline-color: var(--bg); }
+
+footer { padding-block: 28px; font-size: .88rem; color: var(--ink-2); }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+
+@media (max-width: 860px) {
+  .hero .wrap, .row, .split { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px) {
+  .steps { grid-template-columns: 1fr; }
+  .chat { min-height: 0; }
+}

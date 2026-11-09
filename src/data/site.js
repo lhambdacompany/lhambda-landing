@@ -24,7 +24,7 @@ export const chat = [
 export const services = [
   {
     title: 'Agentes de WhatsApp',
-    desc: 'Contestan consultas las 24 horas con la información de tu negocio, hacen las preguntas que harías vos, agendan y te pasan el contacto con un resumen. Cuando quieras, tomás la conversación. Funcionan sobre la API oficial de WhatsApp Business.',
+    desc: 'Armo asistentes que contestan consultas las 24 horas con la información de tu negocio, hacen las preguntas que harías vos, agendan y te pasan el contacto con un resumen. Cuando quieras, tomás la conversación. Se construyen sobre la API oficial de WhatsApp Business.',
   },
   {
     title: 'Apps móviles',

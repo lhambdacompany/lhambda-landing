@@ -18,7 +18,7 @@ export default function PhoneChat() {
           ))}
         </ol>
       </div>
-      <figcaption className="note">Conversación de ejemplo. Nombres y datos inventados.</figcaption>
+      <figcaption className="note">Ilustración de cómo conversaría el asistente. Nombres y datos inventados.</figcaption>
     </figure>
   )
 }

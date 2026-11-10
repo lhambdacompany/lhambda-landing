@@ -123,7 +123,7 @@ export function Radar({ label }) {
       <span className="absolute inset-[28%] rounded-full border border-white/10" />
       <span className="absolute inset-[14%] rounded-full border border-dashed border-white/10" />
       <span className="relative h-3 w-3 rounded-full bg-glow shadow-[0_0_22px_7px_rgba(125,211,252,.75)]" />
-      <span className="absolute bottom-[10%] font-mono text-xs text-ink-2">{label}</span>
+      {label && <span className="absolute bottom-[10%] font-mono text-xs text-ink-2">{label}</span>}
     </div>
   )
 }

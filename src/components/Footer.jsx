@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { AtSign, Mail, MapPin, MessageCircle } from 'lucide-react'
+import { AtSign, Mail, MessageCircle } from 'lucide-react'
 import { contact, nav, wa } from '../data/contenido'
 import { Container } from './ui'
 
@@ -29,7 +29,6 @@ export default function Footer() {
               <li><a className="inline-flex items-center gap-2 transition hover:text-white" href={wa('Hola, quiero consultar por un desarrollo.')} target="_blank" rel="noreferrer"><MessageCircle className="h-4 w-4" />WhatsApp</a></li>
               <li><a className="inline-flex items-center gap-2 transition hover:text-white" href={`mailto:${contact.email}`}><Mail className="h-4 w-4" />{contact.email}</a></li>
               <li><a className="inline-flex items-center gap-2 transition hover:text-white" href={contact.instagram} target="_blank" rel="noreferrer"><AtSign className="h-4 w-4" />{contact.instagramUser}</a></li>
-              <li className="inline-flex items-center gap-2"><MapPin className="h-4 w-4" />{contact.place}</li>
             </ul>
           </div>
         </div>

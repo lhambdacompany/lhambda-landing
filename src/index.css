@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html { scroll-behavior: smooth; }
+body { @apply bg-bg font-sans text-ink antialiased; overflow-x: hidden; }
+::selection { background: rgba(94, 140, 255, 0.35); }
+:focus-visible { outline: 2px solid #7dd3fc; outline-offset: 3px; border-radius: 6px; }
+
+@property --ang { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
+@keyframes ang { to { --ang: 360deg; } }
+@keyframes orbit { to { transform: rotate(360deg); } }
+@keyframes scan { 0% { transform: translateY(-100%); } 100% { transform: translateY(100%); } }
+
+/* rejilla técnica de fondo */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 40%, #000 25%, transparent 72%);
+  mask-image: radial-gradient(ellipse at 50% 40%, #000 25%, transparent 72%);
+}
+
+/* tarjeta con foco de luz que sigue al mouse */
+.card-spot {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.025);
+  border-radius: 1.5rem;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.card-spot::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(94, 140, 255, 0.16), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.card-spot:hover { border-color: rgba(125, 211, 252, 0.28); }
+.card-spot:hover::before { opacity: 1; }
+
+/* botón principal con borde de luz giratorio */
+.btn-glow { position: relative; isolation: isolate; }
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  inset: -1.5px;
+  z-index: -1;
+  border-radius: inherit;
+  background: conic-gradient(from var(--ang), transparent 0 66%, #7dd3fc 86%, #5e8cff 95%, transparent 100%);
+  animation: ang 3.5s linear infinite;
+  filter: blur(3px);
+  opacity: 0.9;
+}
+
+.text-shine {
+  background: linear-gradient(100deg, #fff 30%, #9fc0ff 50%, #fff 70%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shine 6s linear infinite;
+}
+@keyframes shine { to { background-position: -200% 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+}

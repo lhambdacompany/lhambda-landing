@@ -21,7 +21,7 @@ export default function Home() {
           <div>
             <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="mb-8 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/[0.04] px-4 py-2 font-mono text-xs text-ink-2 backdrop-blur">
               <span className="relative flex h-2 w-2"><span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-glow opacity-75" /><span className="relative inline-flex h-2 w-2 rounded-full bg-glow" /></span>
-              Estudio de software en Concordia, Argentina
+              Estudio de software en Argentina
             </motion.p>
             <h1 className="text-[2.6rem] font-semibold leading-[1.04] tracking-tight sm:text-6xl lg:text-[4.4rem]">
               <WordsIn text="Convertimos problemas empresariales en" />{' '}

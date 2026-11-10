@@ -35,7 +35,7 @@ export default function Nosotros() {
         <Container className="grid items-center gap-14 lg:grid-cols-2">
           <Reveal>
             <Eyebrow>Dónde estamos</Eyebrow>
-            <h2 className="text-3xl font-semibold leading-[1.1] tracking-tight sm:text-5xl">Base en Concordia, trabajo en todo el país.</h2>
+            <h2 className="text-3xl font-semibold leading-[1.1] tracking-tight sm:text-5xl">Desde Argentina, trabajamos con todo el país.</h2>
             <p className="mt-5 text-lg leading-relaxed text-ink-2">Trabajamos de forma remota con empresas de distintas ciudades, con videollamadas y avances periódicos. La distancia no cambia la forma de trabajar.</p>
           </Reveal>
           <Reveal delay={0.1}><Radar /></Reveal>

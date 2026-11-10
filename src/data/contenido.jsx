@@ -7,7 +7,6 @@ export const contact = {
   email: 'benjamin@lhambda.com',
   instagram: 'https://www.instagram.com/lhambda/',
   instagramUser: '@lhambda',
-  place: 'Concordia, Entre Ríos, Argentina',
 }
 export const wa = (msg) => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`
 export const mailto = (subject, body = '') => `mailto:${contact.email}?subject=${encodeURIComponent(subject)}${body ? `&body=${encodeURIComponent(body)}` : ''}`
@@ -20,7 +19,7 @@ export const nav = [
   { name: 'Nosotros', to: '/nosotros' },
 ]
 
-export const tech = ['React', 'React Native', 'Expo', 'Node.js', 'TypeScript', 'Python', 'PostgreSQL', 'MongoDB', 'AWS', 'Docker', 'LangChain', 'WhatsApp Business API']
+export const tech = ['React', 'React Native', 'Expo', 'Node.js', 'TypeScript', 'Python', 'PostgreSQL', 'MongoDB', 'AWS', 'Docker', 'LangChain', 'WhatsApp API']
 
 export const servicios = [
   {

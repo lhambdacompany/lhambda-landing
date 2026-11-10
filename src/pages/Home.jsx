@@ -57,7 +57,9 @@ export default function Home() {
                   <ul className="mt-5 space-y-2 text-sm text-ink-2">
                     {s.items.slice(0, 3).map((it) => <li key={it} className="flex items-center gap-2"><Check className="h-4 w-4 text-glow" />{it}</li>)}
                   </ul>
-                  <Link to="/servicios" className="mt-8 inline-flex items-center gap-1 text-sm font-medium text-white transition hover:text-glow">Conocer más <ArrowUpRight className="h-4 w-4" /></Link>
+                  <div className="mt-auto pt-8">
+                    <Link to="/servicios" className="inline-flex items-center gap-1 text-sm font-medium text-white transition hover:text-glow">Conocer más <ArrowUpRight className="h-4 w-4" /></Link>
+                  </div>
                 </SpotCard>
               </Reveal>
             ))}

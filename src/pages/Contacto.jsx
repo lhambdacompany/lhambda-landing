@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { AtSign, Mail, MapPin, MessageCircle } from 'lucide-react'
+import { AtSign, Mail, MessageCircle } from 'lucide-react'
 import { Reveal, SpotCard } from '../components/fx'
 import { Btn, Container, PageHero, useTitle } from '../components/ui'
 import { contact, mailto, wa } from '../data/contenido'
@@ -16,7 +16,6 @@ export default function Contacto() {
     { icon: MessageCircle, titulo: 'WhatsApp', valor: contact.phone, href: wa('Hola, quiero consultar por un desarrollo.') },
     { icon: Mail, titulo: 'Email', valor: contact.email, href: `mailto:${contact.email}` },
     { icon: AtSign, titulo: 'Instagram', valor: contact.instagramUser, href: contact.instagram },
-    { icon: MapPin, titulo: 'Ubicación', valor: contact.place },
   ]
   return (
     <>

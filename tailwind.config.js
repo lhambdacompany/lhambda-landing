@@ -5,16 +5,15 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Sora', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       colors: {
         bg: '#05060a',
         surface: '#0b0d13',
         ink: '#f5f7fb',
         'ink-2': '#a3a9b8',
-        'ink-3': '#6b7285',
+        'ink-3': '#7b8296',
         accent: '#5e8cff',
-        glow: '#7dd3fc',
+        mist: '#9fc0ff',
       },
       keyframes: {
         marquee: { from: { transform: 'translateX(0)' }, to: { transform: 'translateX(-50%)' } },

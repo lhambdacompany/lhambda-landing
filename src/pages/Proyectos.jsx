@@ -20,7 +20,7 @@ export default function Proyectos() {
                   <p className="mt-4 text-xl text-ink-2">{carpuling.resumen}</p>
                   <p className="mt-6 leading-relaxed text-ink-2">{carpuling.texto}</p>
                   <div className="mt-6 flex flex-wrap gap-2">
-                    {carpuling.stack.map((t) => <span key={t} className="rounded-full border border-white/15 px-3 py-1 font-mono text-xs text-ink-2">{t}</span>)}
+                    {carpuling.stack.map((t) => <span key={t} className="rounded-full border border-white/15 px-3 py-1 text-xs font-medium tracking-[0.02em] text-ink-2">{t}</span>)}
                   </div>
                 </div>
                 <RouteMap className="w-full rounded-2xl border border-white/10 bg-black/30" />
@@ -37,7 +37,7 @@ export default function Proyectos() {
             {carpuling.capacidades.map((c, i) => (
               <Reveal key={c} delay={(i % 3) * 0.07}>
                 <SpotCard className="flex items-center gap-4 p-6">
-                  <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-glow/40 text-glow"><Check className="h-4 w-4" /></span>
+                  <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-accent/40 text-accent"><Check className="h-4 w-4" /></span>
                   <span className="text-ink-2">{c}</span>
                 </SpotCard>
               </Reveal>
@@ -50,7 +50,7 @@ export default function Proyectos() {
         <Container>
           <Reveal>
             <SpotCard className="p-10 text-center sm:p-16">
-              <p className="font-mono text-xs text-glow">El próximo</p>
+              <p className="text-xs font-medium uppercase tracking-[0.14em] text-accent">El próximo</p>
               <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-5xl">Tu proyecto.</h2>
               <p className="mx-auto mt-4 max-w-xl text-ink-2">Contanos qué necesitás resolver. Diseñamos la solución y la construimos con vos.</p>
               <div className="mt-8"><Btn to="/contacto">Empezar</Btn></div>

@@ -21,7 +21,7 @@ export default function Servicios() {
               <p className="mt-5 text-lg leading-relaxed text-ink-2">{s.texto}</p>
               <ul className="mt-8 space-y-3">
                 {s.items.map((it) => (
-                  <li key={it} className="flex items-center gap-3 border-b border-white/[0.07] pb-3 text-ink-2"><Check className="h-4 w-4 shrink-0 text-glow" />{it}</li>
+                  <li key={it} className="flex items-center gap-3 border-b border-white/[0.07] pb-3 text-ink-2"><Check className="h-4 w-4 shrink-0 text-accent" />{it}</li>
                 ))}
               </ul>
             </Reveal>
@@ -41,11 +41,11 @@ export default function Servicios() {
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             {planes.map((p, i) => (
               <Reveal key={p.nombre} delay={i * 0.1} className="h-full">
-                <SpotCard className={`h-full p-8 ${p.destacado ? 'border-glow/40 bg-accent/[0.06]' : ''}`}>
+                <SpotCard className={`h-full p-8 ${p.destacado ? 'border-accent/40 bg-accent/[0.06]' : ''}`}>
                   <h3 className="text-2xl font-semibold">{p.nombre}</h3>
                   <p className="mt-2 text-ink-2">{p.texto}</p>
                   <ul className="mt-6 space-y-3 text-sm text-ink-2">
-                    {p.items.map((it) => <li key={it} className="flex items-center gap-2"><Check className="h-4 w-4 text-glow" />{it}</li>)}
+                    {p.items.map((it) => <li key={it} className="flex items-center gap-2"><Check className="h-4 w-4 text-accent" />{it}</li>)}
                   </ul>
                 </SpotCard>
               </Reveal>

@@ -6,7 +6,7 @@
 html { scroll-behavior: smooth; }
 body { @apply bg-bg font-sans text-ink antialiased; overflow-x: hidden; }
 ::selection { background: rgba(94, 140, 255, 0.35); }
-:focus-visible { outline: 2px solid #7dd3fc; outline-offset: 3px; border-radius: 6px; }
+:focus-visible { outline: 2px solid #9fc0ff; outline-offset: 3px; border-radius: 6px; }
 
 @property --ang { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
 @keyframes ang { to { --ang: 360deg; } }
@@ -41,7 +41,7 @@ body { @apply bg-bg font-sans text-ink antialiased; overflow-x: hidden; }
   transition: opacity 0.3s;
   pointer-events: none;
 }
-.card-spot:hover { border-color: rgba(125, 211, 252, 0.28); }
+.card-spot:hover { border-color: rgba(159, 192, 255, 0.28); }
 .card-spot:hover::before { opacity: 1; }
 
 /* botón principal con borde de luz giratorio */
@@ -52,7 +52,7 @@ body { @apply bg-bg font-sans text-ink antialiased; overflow-x: hidden; }
   inset: -1.5px;
   z-index: -1;
   border-radius: inherit;
-  background: conic-gradient(from var(--ang), transparent 0 66%, #7dd3fc 86%, #5e8cff 95%, transparent 100%);
+  background: conic-gradient(from var(--ang), transparent 0 66%, #9fc0ff 86%, #5e8cff 95%, transparent 100%);
   animation: ang 3.5s linear infinite;
   filter: blur(3px);
   opacity: 0.9;

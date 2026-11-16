@@ -13,15 +13,15 @@ export default function Soluciones() {
             <Reveal key={nombre} delay={0.05}>
               <SpotCard className="grid gap-8 p-8 sm:p-10 lg:grid-cols-[0.9fr_1.1fr_1.1fr] lg:items-start">
                 <div className="flex items-center gap-4 lg:block">
-                  <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl border border-white/15 bg-white/[0.04] text-glow"><Icon className="h-6 w-6" /></span>
+                  <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl border border-white/15 bg-white/[0.04] text-accent"><Icon className="h-6 w-6" /></span>
                   <h2 className="text-2xl font-semibold tracking-tight lg:mt-6">{nombre}</h2>
                 </div>
                 <div>
-                  <p className="font-mono text-xs text-ink-3">El reto</p>
+                  <p className="text-xs font-medium uppercase tracking-[0.14em] text-ink-3">El reto</p>
                   <p className="mt-2 leading-relaxed text-ink-2">{reto}</p>
                 </div>
                 <div>
-                  <p className="font-mono text-xs text-glow">Lo que construimos</p>
+                  <p className="text-xs font-medium uppercase tracking-[0.14em] text-accent">Lo que construimos</p>
                   <p className="mt-2 leading-relaxed text-ink-2">{solucion}</p>
                 </div>
               </SpotCard>

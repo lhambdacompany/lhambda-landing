@@ -20,7 +20,7 @@ export default function Navbar() {
       <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled || open ? 'border-b border-white/[0.08] bg-bg/70 backdrop-blur-xl' : 'border-b border-transparent'}`}>
         <Container className="flex h-[4.5rem] items-center justify-between">
           <Link to="/" className="flex items-center gap-3" aria-label="Lhambda, inicio">
-            <img src="/img/lhambda-white.png" alt="" width="34" height="34" className="h-8 w-8 object-contain" />
+            <img src="/img/isotipo-blanco.svg" alt="" width="25" height="28" className="h-7 w-auto" />
             <span className="text-lg font-semibold tracking-tight">Lhambda</span>
           </Link>
           <nav className="hidden items-center gap-1 md:flex" aria-label="Principal">

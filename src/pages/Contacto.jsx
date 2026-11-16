@@ -4,7 +4,7 @@ import { Reveal, SpotCard } from '../components/fx'
 import { Btn, Container, PageHero, useTitle } from '../components/ui'
 import { contact, mailto, wa } from '../data/contenido'
 
-const campo = 'w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-base text-white placeholder:text-ink-3 outline-none transition focus:border-glow/60 focus:bg-white/[0.06]'
+const campo = 'w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-base text-white placeholder:text-ink-3 outline-none transition focus:border-accent/60 focus:bg-white/[0.06]'
 
 export default function Contacto() {
   useTitle('Contacto | Lhambda')
@@ -43,8 +43,8 @@ export default function Contacto() {
             {info.map(({ icon: Icon, titulo, valor, href }, i) => (
               <Reveal key={titulo} delay={i * 0.07}>
                 <SpotCard as={href ? 'a' : 'div'} {...(href ? { href, target: '_blank', rel: 'noreferrer' } : {})} className="flex items-center gap-5 p-6">
-                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl border border-white/15 bg-white/[0.04] text-glow"><Icon className="h-5 w-5" /></span>
-                  <span><span className="block font-mono text-xs text-ink-3">{titulo}</span><span className="mt-1 block text-ink">{valor}</span></span>
+                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl border border-white/15 bg-white/[0.04] text-accent"><Icon className="h-5 w-5" /></span>
+                  <span><span className="block text-xs font-medium uppercase tracking-[0.14em] text-ink-3">{titulo}</span><span className="mt-1 block text-ink">{valor}</span></span>
                 </SpotCard>
               </Reveal>
             ))}

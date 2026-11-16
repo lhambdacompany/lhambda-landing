@@ -13,7 +13,7 @@ export const Container = ({ className = '', children }) => (
 
 export function Btn({ to, href, variant = 'primary', children, className = '' }) {
   const base = 'group inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-medium transition'
-  const look = variant === 'primary' ? 'btn-glow bg-white text-black hover:bg-white/90' : 'border border-white/20 text-white hover:border-glow/60 hover:bg-white/5'
+  const look = variant === 'primary' ? 'btn-glow bg-white text-black hover:bg-white/90' : 'border border-white/20 text-white hover:border-accent/60 hover:bg-white/5'
   const inner = <>{children}<ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></>
   const cls = `${base} ${look} ${className}`
   return to
@@ -22,7 +22,7 @@ export function Btn({ to, href, variant = 'primary', children, className = '' })
 }
 
 export const Eyebrow = ({ children }) => (
-  <p className="mb-4 inline-flex items-center gap-2 font-mono text-xs text-glow"><span className="h-px w-6 bg-glow/60" />{children}</p>
+  <p className="mb-4 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.14em] text-accent"><span className="h-px w-6 bg-accent/60" />{children}</p>
 )
 
 export function SectionHead({ eyebrow, title, text, center = false }) {
@@ -87,7 +87,7 @@ export function Accordion({ items }) {
     <div className="divide-y divide-white/10 border-y border-white/10">
       {items.map((it, i) => (
         <div key={it.q}>
-          <button onClick={() => setOpen(open === i ? -1 : i)} aria-expanded={open === i} className="flex w-full items-center justify-between gap-6 py-6 text-left text-lg font-medium transition hover:text-glow">
+          <button onClick={() => setOpen(open === i ? -1 : i)} aria-expanded={open === i} className="flex w-full items-center justify-between gap-6 py-6 text-left text-lg font-medium transition hover:text-accent">
             {it.q}
             <motion.span animate={{ rotate: open === i ? 45 : 0 }} className="shrink-0 text-ink-2"><Plus className="h-5 w-5" /></motion.span>
           </button>
@@ -112,11 +112,11 @@ export function Timeline({ steps }) {
   return (
     <div ref={ref} className="relative">
       <div className="absolute left-[19px] top-0 h-full w-px bg-white/10 md:left-1/2" />
-      <motion.div style={{ height: h }} className="absolute left-[19px] top-0 w-px bg-gradient-to-b from-accent to-glow shadow-[0_0_14px_#7dd3fc] md:left-1/2" />
+      <motion.div style={{ height: h }} className="absolute left-[19px] top-0 w-px bg-gradient-to-b from-accent to-mist shadow-[0_0_14px_#9fc0ff] md:left-1/2" />
       <ol className="space-y-14">
         {steps.map((s, i) => (
           <li key={s.titulo} className="relative grid gap-4 pl-14 md:grid-cols-2 md:gap-24 md:pl-0">
-            <span className="absolute left-0 top-0 grid h-10 w-10 place-items-center rounded-full border border-glow/50 bg-bg font-mono text-sm text-glow shadow-[0_0_20px_rgba(125,211,252,.25)] md:left-1/2 md:-translate-x-1/2">{i + 1}</span>
+            <span className="absolute left-0 top-0 grid h-10 w-10 place-items-center rounded-full border border-accent/50 bg-bg text-sm font-semibold text-accent shadow-[0_0_20px_rgba(159,192,255,.25)] md:left-1/2 md:-translate-x-1/2">{i + 1}</span>
             <Reveal className={i % 2 ? 'md:col-start-2' : 'md:text-right'}>
               <h3 className="text-2xl font-semibold">{s.titulo}</h3>
               <p className="mt-2 leading-relaxed text-ink-2">{s.texto}</p>

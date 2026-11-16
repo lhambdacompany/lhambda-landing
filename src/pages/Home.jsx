@@ -19,8 +19,8 @@ export default function Home() {
         <div className="absolute -left-40 top-1/3 -z-10 h-[28rem] w-[28rem] rounded-full bg-accent/20 blur-[140px]" />
         <Container className="grid items-center gap-8 py-16 lg:grid-cols-[1.15fr_0.85fr]">
           <div>
-            <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="mb-8 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/[0.04] px-4 py-2 font-mono text-xs text-ink-2 backdrop-blur">
-              <span className="relative flex h-2 w-2"><span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-glow opacity-75" /><span className="relative inline-flex h-2 w-2 rounded-full bg-glow" /></span>
+            <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="mb-8 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/[0.04] px-4 py-2 text-xs font-medium uppercase tracking-[0.14em] text-ink-2 backdrop-blur">
+              <span className="relative flex h-2 w-2"><span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-mist opacity-75" /><span className="relative inline-flex h-2 w-2 rounded-full bg-mist" /></span>
               Estudio de software en Argentina
             </motion.p>
             <h1 className="text-[2.6rem] font-semibold leading-[1.04] tracking-tight sm:text-6xl lg:text-[4.4rem]">
@@ -55,10 +55,10 @@ export default function Home() {
                   <h3 className="text-2xl font-semibold tracking-tight">{s.titulo}</h3>
                   <p className="mt-3 leading-relaxed text-ink-2">{s.resumen}</p>
                   <ul className="mt-5 space-y-2 text-sm text-ink-2">
-                    {s.items.slice(0, 3).map((it) => <li key={it} className="flex items-center gap-2"><Check className="h-4 w-4 text-glow" />{it}</li>)}
+                    {s.items.slice(0, 3).map((it) => <li key={it} className="flex items-center gap-2"><Check className="h-4 w-4 text-accent" />{it}</li>)}
                   </ul>
                   <div className="mt-auto pt-8">
-                    <Link to="/servicios" className="inline-flex items-center gap-1 text-sm font-medium text-white transition hover:text-glow">Conocer más <ArrowUpRight className="h-4 w-4" /></Link>
+                    <Link to="/servicios" className="inline-flex items-center gap-1 text-sm font-medium text-white transition hover:text-accent">Conocer más <ArrowUpRight className="h-4 w-4" /></Link>
                   </div>
                 </SpotCard>
               </Reveal>
@@ -83,7 +83,7 @@ export default function Home() {
             {industrias.map(({ icon: Icon, nombre, solucion, ancho }, i) => (
               <Reveal key={nombre} delay={(i % 3) * 0.08} className={ancho ? 'md:col-span-2' : ''}>
                 <SpotCard className="h-full p-8">
-                  <span className="mb-6 grid h-12 w-12 place-items-center rounded-2xl border border-white/15 bg-white/[0.04] text-glow"><Icon className="h-5 w-5" /></span>
+                  <span className="mb-6 grid h-12 w-12 place-items-center rounded-2xl border border-white/15 bg-white/[0.04] text-accent"><Icon className="h-5 w-5" /></span>
                   <h3 className="text-xl font-semibold tracking-tight">{nombre}</h3>
                   <p className="mt-3 max-w-xl leading-relaxed text-ink-2">{solucion}</p>
                 </SpotCard>
@@ -105,7 +105,7 @@ export default function Home() {
                 <p className="mt-3 text-lg text-ink-2">{carpuling.resumen}</p>
                 <p className="mt-5 leading-relaxed text-ink-2">{carpuling.texto}</p>
                 <div className="mt-6 flex flex-wrap gap-2">
-                  {carpuling.stack.map((t) => <span key={t} className="rounded-full border border-white/15 px-3 py-1 font-mono text-xs text-ink-2">{t}</span>)}
+                  {carpuling.stack.map((t) => <span key={t} className="rounded-full border border-white/15 px-3 py-1 text-xs font-medium tracking-[0.02em] text-ink-2">{t}</span>)}
                 </div>
                 <div className="mt-8"><Btn to="/proyectos" variant="ghost">Ver el proyecto</Btn></div>
               </div>
@@ -123,7 +123,7 @@ export default function Home() {
             {pasos.map((p, i) => (
               <Reveal key={p.titulo} delay={i * 0.07} className="bg-bg">
                 <div className="group h-full p-7 transition hover:bg-white/[0.03]">
-                  <span className="font-mono text-sm text-glow">{i + 1}</span>
+                  <span className="text-sm font-semibold text-accent">{i + 1}</span>
                   <h3 className="mt-4 text-lg font-semibold">{p.titulo}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-ink-2">{p.texto}</p>
                 </div>

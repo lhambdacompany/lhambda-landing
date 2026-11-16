@@ -18,7 +18,7 @@ export default function App() {
       <CursorGlow />
       <Navbar />
       {/* barra de luz que cruza la parte de arriba en cada cambio de página */}
-      <motion.div key={`barra-${location.pathname}`} aria-hidden className="pointer-events-none fixed inset-x-0 top-0 z-[60] h-[2px] origin-left bg-gradient-to-r from-accent to-glow shadow-[0_0_12px_#7dd3fc]" initial={{ scaleX: 0, opacity: 1 }} animate={{ scaleX: 1, opacity: [1, 1, 0] }} transition={{ duration: 1, ease: 'easeOut' }} />
+      <motion.div key={`barra-${location.pathname}`} aria-hidden className="pointer-events-none fixed inset-x-0 top-0 z-[60] h-[2px] origin-left bg-gradient-to-r from-accent to-mist shadow-[0_0_12px_#9fc0ff]" initial={{ scaleX: 0, opacity: 1 }} animate={{ scaleX: 1, opacity: [1, 1, 0] }} transition={{ duration: 1, ease: 'easeOut' }} />
       <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
         <motion.div key={location.pathname} initial={{ opacity: 0, y: 24, filter: 'blur(10px)' }} animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }} exit={{ opacity: 0, y: -16, filter: 'blur(10px)' }} transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}>
           <main>

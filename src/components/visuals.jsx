@@ -87,7 +87,7 @@ export function DiagramAI() {
       ))}
       <circle cx="140" cy="140" r="22" fill="#05060a" stroke="#5e8cff" strokeWidth="1.5" />
       <circle cx="140" cy="140" r="22" fill="none" stroke="#5e8cff"><animate attributeName="r" values="22;48" dur="2.8s" repeatCount="indefinite" /><animate attributeName="opacity" values=".6;0" dur="2.8s" repeatCount="indefinite" /></circle>
-      <path d="M133 127 L148 154 M141 140 L133 154" stroke="#fff" strokeWidth="2.4" strokeLinecap="round" fill="none" />
+      <g transform="translate(140 140) scale(0.0471) translate(-385.5 -385)" fill="#f5f7fb"><circle cx="187" cy="162" r="52.5"/><path d="M240 287A147 147 0 0 1 387 140V550H240Z"/><path d="M240 549H308V659A68 68 0 0 1 240 591Z"/><path d="M387 549H635A124.2 124.2 0 0 1 388 549Z"/></g>
     </svg>
   )
 }
